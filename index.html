@@ -11,15 +11,19 @@
         <ul>
             <li>
                 <label> Nama Pengirim : </label>
-                <input name="namaPengirim" />
+                <input id='namaPengirim' name="namaPengirim" />
             </li><br>
             <li>
                 <label> Nama Penerima : </label>
-                <input id="namaPenerima" name="" />
+                <input id="namaPenerima" name="namaPenerima" />
+            </li> <br>
+            <li>
+                <label> Alamat Penerima : </label>
+                <input id="alamatPenerima" name="alamatPenerima" />
             </li> <br>
             <li>
                 <label> Kota Awal : </label>
-                <select name='kotaAwal' id='kotaAwal'>
+                <select id='kotaPengirim' name='kotaPengirim'>
                     <option value='jakarta'>Jakarta</option>
                 </select>
             </li><br>
@@ -35,17 +39,17 @@
                 </select>
             </li><br>
             <li>
-                <label> Berat Barang : </label>
-                <input id="" name="" />
+                <label> Berat Barang: </label>
+                <input id="beratBarang" name="beratBarang" type='number' />
             </li> <br>
             <li>
                 <label> Opsi Pengiriman : </label>
-                <select name='opsi-kirim'>
+                <select id='opsiKirim' name='opsiKirim'>
                     <option value='xpress'>Xpress</option>
                     <option value='regular'>Regular</option>
                 </select>
             </li><br>
-                <button type='submit' name='tombol' value='submit' onclick="submit()">Submit</button>
+                <button type='submit' value='submit' onclick="submit()">Submit</button>
         </ul>
         </form>
     </div>

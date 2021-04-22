@@ -26,9 +26,10 @@ function submit(e) {
   let namaPengirim = document.getElementById('namaPengirim').value
   let namaPenerima = document.getElementById('namaPenerima').value
   let alamatPenerima = document.getElementById('alamatPenerima').value
+  let kotaPengirim = document.getElementById('kotaPengirim')
   let kotaTujuan = document.getElementById('kotaTujuan')
   let beratBarang = document.getElementById('beratBarang').value
-  let opsiPengiriman = document.getElementById('opsiPengiriman').value
+  let opsiKirim = document.getElementById('opsiKirim').value
   let lamaPengiriman = 0
   let ongkir = 0
   let jarak = 0
@@ -41,9 +42,9 @@ function submit(e) {
   }
 
   //penentuan lama pengiriman
-  if (opsiPengiriman === 'Xpress') {
+  if (opsiKirim === 'Xpress') {
     lamaPengiriman = 1
-  } else if (opsiPengiriman === 'Regular') {
+  } else if (opsiKirim === 'Regular') {
     lamaPengiriman = 3
   }
 
@@ -85,6 +86,8 @@ function submit(e) {
     namaPengirim,
     namaPenerima,
     alamatPenerima,
+    kotaPengirim,
+    kotaTujuan,
     beratBarang,
     jarak,
     lamaPengiriman,
