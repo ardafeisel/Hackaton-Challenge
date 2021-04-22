@@ -12,14 +12,16 @@
 
 document.getElementById('submit').addEventListener('click', submit)
 
+let penampungData = []
+
 function submit() {
   const daftarKotaTujuan = {
-    jakarta: 5,
-    bogor: 42,
-    depok: 12,
-    tangerang: 13,
-    bekasi: 17,
-    bandung: 115
+    Jakarta: 5,
+    Bogor: 42,
+    Depok: 12,
+    Tangerang: 13,
+    Bekasi: 17,
+    Bandung: 115
   }
 
   let namaPengirim = document.getElementById('namaPengirim').value
@@ -93,7 +95,19 @@ function submit() {
     ongkir
   }
   console.log(result);
-  document.getElementById('hasil').innerHTML = result
-  return result
+  penampungData.push(result)
+
+  if (result.kotaPengirim === result.kotaTujuan) {
+    alert(`Order pengiriman di dalam kota telah diterima!
+    Nomor resi: ${result.nomorResi}
+    Estimasi lama pengiriman: ${result.lamaPengiriman} hari
+    Ongkos kirim: ${result.ongkir}`)
+  } else {
+    alert(`Order pengiriman barang dari ${result.kotaPengirim} ke ${result.kotaTujuan} telah diterima!
+    Nomor resi: ${result.nomorResi}
+    Estimasi lama pengiriman: ${result.lamaPengiriman} hari
+    Ongkos kirim: ${result.ongkir}`)
+  }
 }
+
 
