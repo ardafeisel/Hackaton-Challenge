@@ -1,7 +1,10 @@
 <html>
 <head>
+
     <link rel="stylesheet" href="style.css">
     <title> AnterinDong</title>
+
+
 </head>
 <body>
     <div class="header">
@@ -13,56 +16,62 @@
         </div>
     </div>
 
+
     <p4><center><strong> FORM PENGIRIMAN BARANG </strong></p4>  </center>
     <p1><center>Silakan isi form di bawah ini untuk melakukan pengiriman barang </center> </p1>
     <br>
     <div class="main">
         <form>
+
+    <div>
+        <form onsubmit="return false">
+
         <ul>
             <li>
                 <label> Nama Pengirim : </label>
-                <input id="" name="pengirim" />
+                <input id='namaPengirim' name="namaPengirim" />
             </li><br>
             <li>
                 <label> Nama Penerima : </label>
-                <input id="" name="penerima" />
+                <input id="namaPenerima" name="namaPenerima" />
             </li> <br>
             <li>
                 <label> Alamat Penerima : </label>
-                <textarea id="" name="alamat"></textarea>
+                <input id="alamatPenerima" name="alamatPenerima" />
             </li> <br>
             <li>
                 <label> Kota Awal : </label>
-                <select name='kota-awal'>
-                    <option value='jakarta'>Jakarta</option>
+                <select id='kotaPengirim' name='kotaPengirim'>
+                    <option value='Jakarta'>Jakarta</option>
                 </select>
             </li><br>
             <li>
                 <label> Kota Tujuan : </label>
-                <select name='kota-tujuan'>
-                    <option value='jakarta'>Jakarta</option>
-                    <option value='bogor'>Bogor</option>
-                    <option value='depok'>Depokk</option>
-                    <option value='tangerang'>Tangerang</option>
-                    <option value='bekasi'>Bekasi</option>
-                    <option value='bandung'>Bandung</option>
+                <select name='kotaTujuan' id='kotaTujuan'>
+                    <option value='Jakarta'>Jakarta</option>
+                    <option value='Bogor'>Bogor</option>
+                    <option value='Depok'>Depok</option>
+                    <option value='Tangerang'>Tangerang</option>
+                    <option value='Bekasi'>Bekasi</option>
+                    <option value='Bandung'>Bandung</option>
                 </select>
             </li><br>
             <li>
-                <label> Berat Barang : </label>
-                <input id="" name="" />
+                <label> Berat Barang: </label>
+                <input id="beratBarang" name="beratBarang" type='number' />
             </li> <br>
             <li>
                 <label> Opsi Pengiriman : </label>
-                <select name='opsi-kirim'>
+                <select id='opsiKirim' name='opsiKirim'>
                     <option value='xpress'>Xpress</option>
                     <option value='regular'>Regular</option>
                 </select>
             </li><br>
-                <input type='submit' name='tombol' value='submit' />
+                <button type='submit' value='submit' id='submit'>Submit</button>
         </ul>
         </form>
-    </div> <br> <br>
+    </div>
+  
     <div>
         <table>
             <tr>
@@ -115,6 +124,8 @@
                 <td>900000</td>
             </tr>
         </table>
+
     </div>
 </body>
+<script src="index.js"></script>
 </html>
