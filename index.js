@@ -10,10 +10,9 @@
 //   ongkir: '15000' //dalam satuan Rp
 // }
 
+document.getElementById('submit').addEventListener('click', submit)
 
-
-function submit(e) {
-  e.preventDefault()
+function submit() {
   const daftarKotaTujuan = {
     jakarta: 5,
     bogor: 42,
@@ -26,8 +25,8 @@ function submit(e) {
   let namaPengirim = document.getElementById('namaPengirim').value
   let namaPenerima = document.getElementById('namaPenerima').value
   let alamatPenerima = document.getElementById('alamatPenerima').value
-  let kotaPengirim = document.getElementById('kotaPengirim')
-  let kotaTujuan = document.getElementById('kotaTujuan')
+  let kotaPengirim = document.getElementById('kotaPengirim').value
+  let kotaTujuan = document.getElementById('kotaTujuan').value
   let beratBarang = document.getElementById('beratBarang').value
   let opsiKirim = document.getElementById('opsiKirim').value
   let lamaPengiriman = 0
@@ -42,9 +41,9 @@ function submit(e) {
   }
 
   //penentuan lama pengiriman
-  if (opsiKirim === 'Xpress') {
+  if (opsiKirim === 'xpress') {
     lamaPengiriman = 1
-  } else if (opsiKirim === 'Regular') {
+  } else if (opsiKirim === 'regular') {
     lamaPengiriman = 3
   }
 
@@ -94,5 +93,7 @@ function submit(e) {
     ongkir
   }
   console.log(result);
+  document.getElementById('hasil').innerHTML = result
   return result
 }
+

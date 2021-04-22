@@ -7,7 +7,7 @@
     <p1> Silakan isi form di bawah ini untuk melakukan pengiriman barang </p1>
 
     <div>
-        <form>
+        <form onsubmit="return false">
         <ul>
             <li>
                 <label> Nama Pengirim : </label>
@@ -49,11 +49,11 @@
                     <option value='regular'>Regular</option>
                 </select>
             </li><br>
-                <button type='submit' value='submit' onclick="submit()">Submit</button>
+                <button type='submit' value='submit' id='submit'>Submit</button>
         </ul>
         </form>
     </div>
-    <div>
+    <div id='hasil'>
 
     </div>
 </body>
