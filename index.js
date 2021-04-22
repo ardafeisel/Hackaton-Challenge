@@ -10,24 +10,25 @@
 //   ongkir: '15000' //dalam satuan Rp
 // }
 
+document.getElementById('submit').addEventListener('click', submit)
 
+let penampungData = []
 
-function submit(e) {
-  e.preventDefault()
+function submit() {
   const daftarKotaTujuan = {
-    jakarta: 5,
-    bogor: 42,
-    depok: 12,
-    tangerang: 13,
-    bekasi: 17,
-    bandung: 115
+    Jakarta: 5,
+    Bogor: 42,
+    Depok: 12,
+    Tangerang: 13,
+    Bekasi: 17,
+    Bandung: 115
   }
 
   let namaPengirim = document.getElementById('namaPengirim').value
   let namaPenerima = document.getElementById('namaPenerima').value
   let alamatPenerima = document.getElementById('alamatPenerima').value
-  let kotaPengirim = document.getElementById('kotaPengirim')
-  let kotaTujuan = document.getElementById('kotaTujuan')
+  let kotaPengirim = document.getElementById('kotaPengirim').value
+  let kotaTujuan = document.getElementById('kotaTujuan').value
   let beratBarang = document.getElementById('beratBarang').value
   let opsiKirim = document.getElementById('opsiKirim').value
   let lamaPengiriman = 0
@@ -42,9 +43,9 @@ function submit(e) {
   }
 
   //penentuan lama pengiriman
-  if (opsiKirim === 'Xpress') {
+  if (opsiKirim === 'xpress') {
     lamaPengiriman = 1
-  } else if (opsiKirim === 'Regular') {
+  } else if (opsiKirim === 'regular') {
     lamaPengiriman = 3
   }
 
@@ -94,5 +95,19 @@ function submit(e) {
     ongkir
   }
   console.log(result);
-  return result
+  penampungData.push(result)
+
+  if (result.kotaPengirim === result.kotaTujuan) {
+    alert(`Order pengiriman di dalam kota telah diterima!
+    Nomor resi: ${result.nomorResi}
+    Estimasi lama pengiriman: ${result.lamaPengiriman} hari
+    Ongkos kirim: ${result.ongkir}`)
+  } else {
+    alert(`Order pengiriman barang dari ${result.kotaPengirim} ke ${result.kotaTujuan} telah diterima!
+    Nomor resi: ${result.nomorResi}
+    Estimasi lama pengiriman: ${result.lamaPengiriman} hari
+    Ongkos kirim: ${result.ongkir}`)
+  }
 }
+
+

@@ -8,7 +8,7 @@
     <p1> Silakan isi form di bawah ini untuk melakukan pengiriman barang </p1>
 
     <div>
-        <form>
+        <form onsubmit="return false">
         <ul>
             <li>
                 <label> Nama Pengirim : </label>
@@ -25,18 +25,18 @@
             <li>
                 <label> Kota Awal : </label>
                 <select id='kotaPengirim' name='kotaPengirim'>
-                    <option value='jakarta'>Jakarta</option>
+                    <option value='Jakarta'>Jakarta</option>
                 </select>
             </li><br>
             <li>
                 <label> Kota Tujuan : </label>
                 <select name='kotaTujuan' id='kotaTujuan'>
-                    <option value='jakarta'>Jakarta</option>
-                    <option value='bogor'>Bogor</option>
-                    <option value='depok'>Depok</option>
-                    <option value='tangerang'>Tangerang</option>
-                    <option value='bekasi'>Bekasi</option>
-                    <option value='bandung'>Bandung</option>
+                    <option value='Jakarta'>Jakarta</option>
+                    <option value='Bogor'>Bogor</option>
+                    <option value='Depok'>Depok</option>
+                    <option value='Tangerang'>Tangerang</option>
+                    <option value='Bekasi'>Bekasi</option>
+                    <option value='Bandung'>Bandung</option>
                 </select>
             </li><br>
             <li>
@@ -50,10 +50,11 @@
                     <option value='regular'>Regular</option>
                 </select>
             </li><br>
-                <button type='submit' value='submit' onclick="submit()">Submit</button>
+                <button type='submit' value='submit' id='submit'>Submit</button>
         </ul>
         </form>
     </div>
+  
     <div>
         <table>
             <tr>
@@ -106,6 +107,7 @@
                 <td>900000</td>
             </tr>
         </table>
+
     </div>
 </body>
 <script src="index.js"></script>
