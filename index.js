@@ -83,6 +83,7 @@ function submit(e) {
   let result = {
     nomorResi,
     namaPengirim,
+    namaPenerima,
     alamatPenerima,
     beratBarang,
     jarak,
