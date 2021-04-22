@@ -108,6 +108,21 @@ function submit() {
     Estimasi lama pengiriman: ${result.lamaPengiriman} hari
     Ongkos kirim: ${result.ongkir}`)
   }
+
+  let k = '<tbody>'
+  k+= "<tr>";
+  for (let i = 0; i < penampungData.length; i++) {
+  k+= "<td>" + penampungData[i].nomorResi + "</td>";
+  k+= "<td>" + penampungData[i].namaPengirim + "</td>";
+  k+= "<td>" + penampungData[i].namaPenerima + "</td>";
+  k+= "<td>" + penampungData[i].alamatPenerima + "</td>";
+  k+= "<td>" + penampungData[i].kotaPengirim + "</td>";
+  k+= "<td>" + penampungData[i].kotaTujuan + "</td>";
+  k+= "<td>" + penampungData[i].beratBarang + "</td>";
+  k+= "<td>" + penampungData[i].lamaPengiriman + "</td>";
+  k+= "<td>" + penampungData[i].ongkir + "</td>";
+  k+= "</tr>"
+  }
+  k+= "</tbody>"
+  document.getElementById("tableData").innerHTML = k
 }
-
-

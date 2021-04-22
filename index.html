@@ -12,32 +12,33 @@
             <h1>ANTERIN DONG BANG</h1>
         </div>
         <div class="img">
-            <img src="Asset/Web1920–1.png">
+            <img src="Asset/LogoADB.png">
         </div>
     </div>
 
-
-    <p4><center><strong> FORM PENGIRIMAN BARANG </strong></p4>  </center>
-    <p1><center>Silakan isi form di bawah ini untuk melakukan pengiriman barang </center> </p1>
-    <br>
-    <div class="main">
-        <form>
+    <div class="positioning">
+        <p4><center><strong> FORM PENGIRIMAN BARANG </strong></p4>  </center>
+        <p1><center>Silakan isi form di bawah ini untuk melakukan pengiriman barang </center> </p1>
+    </div><br>
 
     <div>
+        <div class="form-style main">
         <form onsubmit="return false">
 
         <ul>
+            <div class="padding">
             <li>
                 <label> Nama Pengirim : </label>
-                <input id='namaPengirim' name="namaPengirim" />
+                <input type="text" id='namaPengirim' name="namaPengirim" />
             </li><br>
+
             <li>
                 <label> Nama Penerima : </label>
-                <input id="namaPenerima" name="namaPenerima" />
+                <input type="text" id="namaPenerima" name="namaPenerima" />
             </li> <br>
             <li>
                 <label> Alamat Penerima : </label>
-                <input id="alamatPenerima" name="alamatPenerima" />
+                <input type="text" id="alamatPenerima" name="alamatPenerima" />
             </li> <br>
             <li>
                 <label> Kota Awal : </label>
@@ -58,21 +59,23 @@
             </li><br>
             <li>
                 <label> Berat Barang: </label>
-                <input id="beratBarang" name="beratBarang" type='number' />
+                <input type="number" id="beratBarang" name="beratBarang" type='number' />
             </li> <br>
             <li>
                 <label> Opsi Pengiriman : </label>
                 <select id='opsiKirim' name='opsiKirim'>
-                    <option value='xpress'>Xpress</option>
-                    <option value='regular'>Regular</option>
+                    <option value='xpress'>Xpress - 1 hari</option>
+                    <option value='regular'>Regular - 3 hari</option>
                 </select>
             </li><br>
-                <button type='submit' value='submit' id='submit'>Submit</button>
-        </ul>
-        </form>
-    </div>
+        
+                <button id="btn-submit" type='submit' value='submit' id='submit'>Submit</button>
+        </div>
+    </ul>
+    </form>
+    </div><br><br><br>
   
-    <div>
+    <div class="table-style">
         <table>
             <tr>
                 <th>Resi</th>
@@ -82,49 +85,10 @@
                 <th>Kota_Awal</th>
                 <th>Kota_Tujuan</th>
                 <th>Berat_Barang</th>
-                <th>Opsi_Pengiriman</th>
-                <th>Ongkos_Kirim</th>
                 <th>Total Biaya</th>
                 <th>Aksi : <input type='submit' name='tombol' value='delete' /> </th>
             </tr>
-            <tr>
-                <td>ABC001</td>
-                <td>Alfreds Futterkiste</td>
-                <td>Maria Anders</td>
-                <td>Jl. Kelinci No.21</td>
-                <td>Jakarta</td>
-                <td>Depok</td>
-                <td>10</td>
-                <td>Xpress</td>
-                <td>50000</td>
-                <td>100000</td>
-            </tr>
-            <tr>
-                <td>ABC002</td>
-                <td>Dadang Codet</td>
-                <td>Mamat Kuda</td>
-                <td>Gg. Haji Mustopa 3</td>
-                <td>Jakarta</td>
-                <td>Bogor</td>
-                <td>15</td>
-                <td>Regular</td>
-                <td>25000</td>
-                <td>650000</td>
-            </tr>
-            <tr>
-                <td>ABC003</td>
-                <td>Kekeyi Bukan Boneka</td>
-                <td>Jamet Bingits</td>
-                <td>Jl. Kenangan 7</td>
-                <td>Jakarta</td>
-                <td>Bekasi</td>
-                <td>7</td>
-                <td>Xpress</td>
-                <td>45000</td>
-                <td>900000</td>
-            </tr>
         </table>
-
     </div>
 </body>
 <script src="index.js"></script>
