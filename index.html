@@ -12,32 +12,33 @@
             <h1>ANTERIN DONG BANG</h1>
         </div>
         <div class="img">
-            <img src="Asset/Web1920–1.png">
+            <img src="Asset/LogoADB.png">
         </div>
     </div>
 
-
-    <p4><center><strong> FORM PENGIRIMAN BARANG </strong></p4>  </center>
-    <p1><center>Silakan isi form di bawah ini untuk melakukan pengiriman barang </center> </p1>
-    <br>
-    <div class="main">
-        <form>
+    <div class="positioning">
+        <p4><center><strong> FORM PENGIRIMAN BARANG </strong></p4>  </center>
+        <p1><center>Silakan isi form di bawah ini untuk melakukan pengiriman barang </center> </p1>
+    </div><br>
 
     <div>
+        <div class="form-style main">
         <form onsubmit="return false">
 
         <ul>
+            <div class="padding">
             <li>
                 <label> Nama Pengirim : </label>
-                <input id='namaPengirim' name="namaPengirim" />
+                <input type="text" id='namaPengirim' name="namaPengirim" />
             </li><br>
+
             <li>
                 <label> Nama Penerima : </label>
-                <input id="namaPenerima" name="namaPenerima" />
+                <input type="text" id="namaPenerima" name="namaPenerima" />
             </li> <br>
             <li>
                 <label> Alamat Penerima : </label>
-                <input id="alamatPenerima" name="alamatPenerima" />
+                <input type="text" id="alamatPenerima" name="alamatPenerima" />
             </li> <br>
             <li>
                 <label> Kota Awal : </label>
@@ -58,21 +59,23 @@
             </li><br>
             <li>
                 <label> Berat Barang: </label>
-                <input id="beratBarang" name="beratBarang" type='number' />
+                <input type="number" id="beratBarang" name="beratBarang" type='number' />
             </li> <br>
             <li>
                 <label> Opsi Pengiriman : </label>
                 <select id='opsiKirim' name='opsiKirim'>
-                    <option value='xpress'>Xpress</option>
-                    <option value='regular'>Regular</option>
+                    <option value='xpress'>Xpress - 1 hari</option>
+                    <option value='regular'>Regular - 3 hari</option>
                 </select>
             </li><br>
-                <button type='submit' value='submit' id='submit'>Submit</button>
-        </ul>
-        </form>
-    </div>
+        
+                <button id="btn-submit" type='submit' value='submit' id='submit'>Submit</button>
+        </div>
+    </ul>
+    </form>
+    </div><br><br><br>
   
-    <div>
+    <div class="table-style">
         <table>
             <tr>
                 <th>Resi</th>
@@ -82,13 +85,14 @@
                 <th>Kota_Awal</th>
                 <th>Kota_Tujuan</th>
                 <th>Berat_Barang</th>
-                <th>Opsi_Pengiriman</th>
+
                 <th>Total Biaya</th>
                 <th>Aksi : <input type='submit' name='tombol' value='delete' /> </th>
             </tr>
-            <tbody id="tableData"></tbody>
-        </table>
 
+            <tbody id="tableData"></tbody>
+
+        </table>
     </div>
 </body>
 <script src="index.js"></script>

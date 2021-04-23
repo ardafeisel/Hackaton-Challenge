@@ -126,4 +126,3 @@ function submit() {
   k+= "</tbody>"
   document.getElementById("tableData").innerHTML = k
 }
-
