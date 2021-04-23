@@ -132,6 +132,7 @@ function generateTable(arr) {
   }
   k+= "</tbody>"
   document.getElementById("tableData").innerHTML = k
+
   
 }
 
@@ -144,3 +145,6 @@ function deleteData(event) {
 
 //`<button type='reset' onclick='deleteData() id_data=${i}>Delete</button>`
 // `<button onclick='deleteData()' id_data=${i} >Delete</button>`
+
+}
+
