@@ -77,7 +77,7 @@ function submit() {
   let randomNum = Math.ceil(Math.random()*100)
   if (randomNum.toString().length === 1) {
     nomorResi += '00'
-  } else if (randomNum.toString.length === 2) {
+  } else if (randomNum.toString().length === 2) {
     nomorResi += '0'
   }
   nomorResi += randomNum
@@ -91,6 +91,7 @@ function submit() {
     kotaTujuan,
     beratBarang,
     jarak,
+    opsiKirim,
     lamaPengiriman,
     ongkir
   }
@@ -109,20 +110,41 @@ function submit() {
     Ongkos kirim: ${result.ongkir}`)
   }
 
+  generateTable(penampungData)
+}
+
+function generateTable(arr) {
   let k = '<tbody>'
   k+= "<tr>";
   for (let i = 0; i < penampungData.length; i++) {
-  k+= "<td>" + penampungData[i].nomorResi + "</td>";
-  k+= "<td>" + penampungData[i].namaPengirim + "</td>";
-  k+= "<td>" + penampungData[i].namaPenerima + "</td>";
-  k+= "<td>" + penampungData[i].alamatPenerima + "</td>";
-  k+= "<td>" + penampungData[i].kotaPengirim + "</td>";
-  k+= "<td>" + penampungData[i].kotaTujuan + "</td>";
-  k+= "<td>" + penampungData[i].beratBarang + "</td>";
-  k+= "<td>" + penampungData[i].lamaPengiriman + "</td>";
-  k+= "<td>" + penampungData[i].ongkir + "</td>";
-  k+= "</tr>"
+    let button = document.createElement('button')
+    k+= "<td>" + arr[i].nomorResi + "</td>";
+    k+= "<td>" + arr[i].namaPengirim + "</td>";
+    k+= "<td>" + arr[i].namaPenerima + "</td>";
+    k+= "<td>" + arr[i].alamatPenerima + "</td>";
+    k+= "<td>" + arr[i].kotaPengirim + "</td>";
+    k+= "<td>" + arr[i].kotaTujuan + "</td>";
+    k+= "<td>" + arr[i].beratBarang + "</td>";
+    k+= "<td>" + arr[i].opsiKirim + "</td>";
+    k+= "<td>" + arr[i].ongkir + "</td>";
+    k+= "<td>" + `<button onclick='deleteData(event)' id_data=${i} >Delete</button>` + "</td>"
+    k+= "</tr>"
   }
   k+= "</tbody>"
   document.getElementById("tableData").innerHTML = k
+
+  
 }
+
+
+function deleteData(event) {
+  const index = Number(event.target.getAttribute('id_data'))
+  penampungData.splice(index,1)
+  generateTable(penampungData)
+}
+
+//`<button type='reset' onclick='deleteData() id_data=${i}>Delete</button>`
+// `<button onclick='deleteData()' id_data=${i} >Delete</button>`
+
+}
+
